@@ -25,8 +25,8 @@ SECRET_KEY = '@m=fner$ln$e2hqg56hdp3_h$&89iq=fp#j#yx+!9z!x5&(yb='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://django-jaysson29.c9users.io/',
-                'simple-django-todo-mine.herokuapp.com']
+ALLOWED_HOSTS = [os.environ.get('C9_HOSTNAME'), os.environ.get('HOSTNAME'),]
+                
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 
@@ -84,7 +84,7 @@ WSGI_APPLICATION = 'c9_django.wsgi.application'
 #        }
 #    }
 
-DATABASES = {'default': dj_database_url.parse("postgres://hpwlopisvxcppg:aa8a43aab85932ed44e5e82e9cb3100c5a1932fb44148c9992157241c5aa33c5@ec2-79-125-4-96.eu-west-1.compute.amazonaws.com:5432/d41qpa15mv8ge0") }
+DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASES_URL')) }
 
 
 # Password validation
