@@ -25,7 +25,8 @@ SECRET_KEY = '@m=fner$ln$e2hqg56hdp3_h$&89iq=fp#j#yx+!9z!x5&(yb='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://django-jaysson29.c9users.io/']
+ALLOWED_HOSTS = ['https://django-jaysson29.c9users.io/',
+                'simple-django-todo-mine.herokuapp.com']
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 
